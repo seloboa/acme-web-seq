@@ -2,8 +2,8 @@
 
 Practice the following tools:
 1. Database
-  *postgreSQL
-  *Sequelize
-  *pg
+  1. postgreSQL
+  2. Sequelize
+  3. pg
 2. Server
-  *express
+  1. express
