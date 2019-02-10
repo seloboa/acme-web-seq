@@ -3,14 +3,15 @@ const db = require('../db/db');
 const {Page, Content} = require('../db/models');
 const homePage = require ('../views/homeView');
 
-router.get('/',async (req,res,next)=>{
+router.get('/:id',async (req,res,next)=>{
   try{
-    const content = await Content.findAll({
+    const pages = await Page.findAll();
+    const contents = await Content.findAll({
       where:{
-        pageId: 1
+        pageId: req.params.id
       }
     })
-    res.send(homePage(content));
+    res.send(homePage(pages, contents));
   }catch(err){
     next(err);
   }

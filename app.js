@@ -6,7 +6,7 @@ const port = process.env.PORT || 3000;
 app.use('/pages', routes);
 
 app.get('/',(req,res,next)=>{
-  res.redirect('/pages');
+  res.redirect('/pages/1');
 })
 
 app.listen(port, () => {
