@@ -1,15 +1,20 @@
 const db = require('./db');
-const {Home, Employee, Contact} = requre('./models');
+const {Page, Content} = require('./models');
 
 const initDb = (force = false) => {
-  return db.authenticate().then(db.sync({force}));
+  return db.authenticate().then(() => {
+    Page.hasMany(Content);
+    Content.belongsTo(Page);
+
+    console.log('syncing');
+    return db.sync({force});
+  });
 };
 
 module.exports = {
   initDb,
   models: {
-    Home,
-    Employee,
-    Contact,
+    Page,
+    Content,
   },
 };
