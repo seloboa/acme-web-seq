@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const db = require('../db/db');
 const {Page, Content} = require('../db/models');
-const homePage = require ('../views/homeView');
+const homePage = require ('../views/mainView');
 
 router.get('/:id',async (req,res,next)=>{
   try{
