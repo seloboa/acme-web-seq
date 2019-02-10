@@ -22,10 +22,8 @@ module.exports = (pages, contents, cur) => html`
             <li class="nav-item">
               <a
                 href="/pages/${page.id}"
-                class = 'nav-link'
-                id="${page.id === parseInt(cur)
-                  ? 'cur'
-                  : ''}"
+                class="nav-link"
+                id="${page.id === parseInt(cur) ? 'cur' : ''}"
                 >${page.name}</a
               >
             </li>
