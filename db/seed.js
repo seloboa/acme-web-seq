@@ -37,4 +37,6 @@ initDb(true).then(async () => {
       await content.setPage(contactPage);
     }),
   ]);
+
+  console.log('db seeded');
 });
