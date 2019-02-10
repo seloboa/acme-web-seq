@@ -11,7 +11,7 @@ router.get('/:id',async (req,res,next)=>{
         pageId: req.params.id
       }
     })
-    res.send(homePage(pages, contents));
+    res.send(homePage(pages, contents, req.params.id));
   }catch(err){
     next(err);
   }
