@@ -1,14 +1,14 @@
 const db = require('../db');
 
-const Employee = db.define('employee', {
+const Content = db.define('content', {
   name: {
     type: db.Sequelize.STRING,
     allowNull: false,
   },
-  title: {
+  body: {
     type: db.Sequelize.STRING,
     allowNull: false,
   },
 });
 
-module.exports = Employee;
+module.exports = Content;
