@@ -1,6 +1,6 @@
 const Sequelize = require ('sequelize');
 
-module.exports = new Sequelize ('acme-web-seq','','',{
+module.exports = new Sequelize ('acmewebseq','','',{
   dialect: 'postgres',
   logging: false,
 });
