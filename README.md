@@ -1,6 +1,6 @@
 # acme-web-seq
 
-Practice the following tools:
+Practiced the following tools:
 1. Database
   * postgreSQL
   * Sequelize
